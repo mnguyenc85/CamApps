@@ -85,7 +85,7 @@ namespace TestOpenCVSharp4.Core
             return bitmap;
         }
 
-        public static void MatToWritableBitmap(Mat mat, WriteableBitmap bmp)
+        public static void MatToBgraWritableBitmap(Mat mat, WriteableBitmap bmp)
         {
             if (mat.Empty()) return;
             if (mat.Width != bmp.Width || mat.Height != bmp.Height) return;
@@ -116,6 +116,29 @@ namespace TestOpenCVSharp4.Core
             bmp.Unlock();
 
             if (requiredDispose) bgra.Dispose();
+        }
+
+        public static void MatToBgrWritableBitmap(Mat mat, WriteableBitmap bmp)
+        {
+            if (mat.Empty()) return;
+            if (mat.Width != bmp.Width || mat.Height != bmp.Height) return;
+            if (mat.Type() != MatType.CV_8UC3) return;
+
+            int width = mat.Width;
+            int height = mat.Height;
+            int stride = bmp.BackBufferStride;
+
+            bmp.Lock();
+            // Copy Mat data to WriteableBitmap
+            IntPtr srcPtr = mat.Data;
+            IntPtr destPtr = bmp.BackBuffer;
+            int length = stride * mat.Height;
+            unsafe
+            {
+                Buffer.MemoryCopy((void*)srcPtr, (void*)destPtr, length, length);
+            }
+            bmp.AddDirtyRect(new Int32Rect(0, 0, width, height));
+            bmp.Unlock();
         }
 
         public static BitmapSource BitmapSourceFromStream(MemoryStream stream)

@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestOpenCVSharp4"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Image Name="CameraImage" Stretch="Uniform" />
-    </Grid>
+        Title="Test OpenCVSharp4" Height="450" Width="800" Background="WhiteSmoke">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File" Margin="2 1">
+                <MenuItem x:Name="MniFileConfig" Header="Configuration..." Click="MniFileConfig_Click"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel DockPanel.Dock="Bottom" Background="DodgerBlue">
+            <TextBlock x:Name="LblCycle" Text="FPS:" Margin="2 1" Foreground="White"/>
+        </StackPanel>
+        
+        <Image Name="CameraImage" Stretch="Uniform" Width="640" Height="360"/>
+    </DockPanel>
 </Window>
