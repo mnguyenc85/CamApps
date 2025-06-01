@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestEmguCV", "TestEmguCV\TestEmguCV.csproj", "{25C52AF9-4E27-43A6-A058-1EFF43A428C1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAForge", "TestAForge\TestAForge.csproj", "{24AA49BF-8DC1-455C-877A-2E34E948D2E6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOpenCVSharp4", "TestOpenCVSharp4\TestOpenCVSharp4.csproj", "{1689F3C4-6448-48A4-8ECB-D3994FCA0561}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{25C52AF9-4E27-43A6-A058-1EFF43A428C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{25C52AF9-4E27-43A6-A058-1EFF43A428C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{25C52AF9-4E27-43A6-A058-1EFF43A428C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{25C52AF9-4E27-43A6-A058-1EFF43A428C1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{24AA49BF-8DC1-455C-877A-2E34E948D2E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{24AA49BF-8DC1-455C-877A-2E34E948D2E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24AA49BF-8DC1-455C-877A-2E34E948D2E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
